@@ -1,5 +1,13 @@
 import QtQuick 2.0
 
+//----------------------------------------------------------------
+// Toast/Popup with specified timeout to show/stay on screen.
+//
+// 1. It can be a toast with image only.
+// 2. It can be a toast with text only.
+// 3. It can be a toast with both image and text.
+//----------------------------------------------------------------
+
 Rectangle {
 
     id: toast
@@ -19,6 +27,8 @@ Rectangle {
 
     width: 320
     height: 240
+
+    anchors.centerIn: parent
 
     z: 1000
 
