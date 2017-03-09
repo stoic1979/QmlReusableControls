@@ -4,8 +4,8 @@ import QtQuick.Window 2.2
 Window {
     id: root
     visible: true
-    width: 640
-    height: 480
+    width: 840
+    height: 600
 
     title: qsTr("Controls Demo")
 
@@ -37,22 +37,64 @@ Window {
         Button {
             width: 120
             height: 60
-            text: "Show Toast"
+            text: "Toast Type 1"
             color: "blue"
             textColor: "white"
 
             onClicked: {
-                console.log("showing toast");
-                toast.visible = true;
+                console.log("showing toast 1");
+                toast1.visible = true;
+            }
+        }
+
+        Button {
+            width: 120
+            height: 60
+            text: "Toast Type 2"
+            color: "blue"
+            textColor: "white"
+
+            onClicked: {
+                console.log("showing toast 2");
+                toast2.visible = true;
+            }
+        }
+
+        Button {
+            width: 120
+            height: 60
+            text: "Toast Type 3"
+            color: "blue"
+            textColor: "white"
+
+            onClicked: {
+                console.log("showing toast 3");
+                toast3.visible = true;
             }
         }
 
     }//row
 
+    // toast with both image and text
     Toast {
-        id: toast
-        anchors.centerIn: parent
+        id: toast1
         text: "Lets raise a toast for WeaveBytes !!!"
+        fontSize: 18
+        textColor: "#ffffff"
+        imgSrc: "qrc:/imgs/images/thumbsup.png"
+    }
+
+    // toast with text only
+    Toast {
+        id: toast2
+        text: "Lets raise a toast for WeaveBytes !!!"
+        fontSize: 18
+        textColor: "#ffffff"
+    }
+
+    // toast with image only
+    Toast {
+        id: toast3
         fontSize: 18
         textColor: "#ffffff"
         imgSrc: "qrc:/imgs/images/thumbsup.png"
