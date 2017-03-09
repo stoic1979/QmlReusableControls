@@ -7,6 +7,7 @@ Rectangle {
     property alias text: msg.text
     property alias fontSize: msg.font.pixelSize
     property alias textColor: msg.color
+    property alias imgSrc: img.source
 
     // time for toast to stay
     property int timeout: 2000
@@ -28,9 +29,19 @@ Rectangle {
     //----------------------------------------------------------------
     visible: false
 
-    Text {
-        id: msg
+    Column {
+
         anchors.centerIn: parent
+        spacing: 10
+
+        Image {
+            id: img
+            x: parent.width/2 - width/2
+        }
+
+        Text {
+            id: msg
+        }
     }
 
     Timer {

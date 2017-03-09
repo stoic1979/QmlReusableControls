@@ -55,5 +55,6 @@ Window {
         text: "Lets raise a toast for WeaveBytes !!!"
         fontSize: 18
         textColor: "#ffffff"
+        imgSrc: "qrc:/imgs/images/thumbsup.png"
     }
 }//root
