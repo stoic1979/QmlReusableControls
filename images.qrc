@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/imgs">
         <file>images/tick.png</file>
+        <file>images/thumbsup.png</file>
     </qresource>
 </RCC>
