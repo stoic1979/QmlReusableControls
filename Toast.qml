@@ -21,24 +21,25 @@ Rectangle {
 
     z: 1000
 
+    //----------------------------------------------------------------
+    // initially toast will not be visible
+    // once its visible, timer will start running
+    // and once timer has triggered, it will hide the toast again
+    //----------------------------------------------------------------
+    visible: false
+
     Text {
         id: msg
         anchors.centerIn: parent
-        width: toast.width - 20
-        height: toast.height/2
-    }
-
-    Component.onCompleted: {
-        console.log("--- wifi config loaded ---");
-        timer.running = true;
     }
 
     Timer {
         id: timer
-        interval: 1000
+        interval: timeout
         repeat: false
-        running: false
+        running: toast.visible
         triggeredOnStart: false
         onTriggered: toast.visible = false;
+
     }
 }//toast

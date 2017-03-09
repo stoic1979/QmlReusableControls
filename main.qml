@@ -25,6 +25,7 @@ Window {
 
         Checkbox {
             y: 10
+            width: 150
             text: "Enable Bluetooth"
         }
 
@@ -33,12 +34,26 @@ Window {
             height: 40
         }
 
+        Button {
+            width: 120
+            height: 60
+            text: "Show Toast"
+            color: "blue"
+            textColor: "white"
+
+            onClicked: {
+                console.log("showing toast");
+                toast.visible = true;
+            }
+        }
+
     }//row
 
     Toast {
-
-        text: "Update done successfully !!!"
-        fontSize: 20
-        textColor: "#222222"
+        id: toast
+        anchors.centerIn: parent
+        text: "Lets raise a toast for WeaveBytes !!!"
+        fontSize: 18
+        textColor: "#ffffff"
     }
 }//root
