@@ -4,5 +4,6 @@
         <file>Button.qml</file>
         <file>Checkbox.qml</file>
         <file>TimeBox.qml</file>
+        <file>Toast.qml</file>
     </qresource>
 </RCC>

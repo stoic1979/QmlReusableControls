@@ -34,4 +34,11 @@ Window {
         }
 
     }//row
+
+    Toast {
+
+        text: "Update done successfully !!!"
+        fontSize: 20
+        textColor: "#222222"
+    }
 }//root
